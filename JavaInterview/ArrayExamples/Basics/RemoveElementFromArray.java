@@ -34,13 +34,22 @@ public class RemoveElementFromArray {
 		try {
 //			int[] removedNums = new int[nums.length];
 			int k = 0;
-			for (int i = 0; i < nums.length; i++) {
-				if (nums[i] != val) {
-					nums[k] = nums[i];
+			//Approach 1
+//			for (int i = 0; i < nums.length; i++) {
+//				if (nums[i] != val) {
+//					nums[k] = nums[i];
+//					k++;
+//				}
+//			}
+
+			//Approach 2
+			for(int i : nums) {
+				if(i != val) {
+					nums[k] = i;
 					k++;
 				}
 			}
-
+			
 			int[] resultArray = Arrays.copyOf(nums, k);
 
 			System.out.println(Arrays.toString(resultArray));
