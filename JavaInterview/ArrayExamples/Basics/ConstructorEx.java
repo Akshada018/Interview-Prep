@@ -10,6 +10,7 @@ public class ConstructorEx {
 
 	public ConstructorEx(){ // default or no-argument constructor
 		this("akshada");
+//		ConstructorEx ce1 = new ConstructorEx();   this will create an infinite loop as we create object with 0 arguments so default contructor will get execute in a loop
 		System.out.println("Adarsh"); //
 //		When we create object with 0 parameters it calls default constructor and it prints "Adarsh"
 
@@ -17,7 +18,7 @@ public class ConstructorEx {
 	}
 	public ConstructorEx(String name){
 //		name = "Ankita";
-		
+//		ConstructorEx ce1 = new ConstructorEx();
 		System.out.println(name);	// 2 - Argumental(Parameterized) constructor
 		// first it prints "Anushka" because from main method first object creation is calling parameterized constructor because we are passing a string in it.
 	}
