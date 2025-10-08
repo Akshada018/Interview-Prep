@@ -18,12 +18,19 @@ public class StringComparison {
 		
 		String c = new String("Hello");
 		String d = new String("Hello");
+		System.out.println(c == d);
+
 		
 		System.out.println(c.equals(d));
 		
 		System.out.println(c.hashCode());
 		System.out.println(d.hashCode());
 
+		String s = "Akshada";
+		String s1 = "Akshada";
+		
+		System.out.println(s == s1);
+		
 	
 //		true
 //		69609650
