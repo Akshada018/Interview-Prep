@@ -15,6 +15,8 @@ public class BasicsOfArray {
 		// Declaration + Allocation
 //		int[] input = new int[5];
 		
+		Arrays.asList("Ravi","Ravi",null,"","Akshada");
+		
 		// initialization
 //		input[0] = 10;
 //		input[1] = 12;
@@ -28,7 +30,7 @@ public class BasicsOfArray {
 		Arrays.sort(input);
 		
 		OptionalInt max = Arrays.stream(input).max();
-		System.out.println(max.getAsInt());
+		System.out.println("MAX : "+max.getAsInt());
 		System.out.println(Arrays.toString(input));
 		
 		
@@ -63,7 +65,7 @@ public class BasicsOfArray {
         
         
         if(secondLargest.isPresent()) {
-        	System.out.println("Second Largest Number: " + secondLargest);
+        	System.out.println("Second Largest Number: " + secondLargest.getAsInt());
         	
         }else {
         	System.out.println("Second Largest Number not found ");
