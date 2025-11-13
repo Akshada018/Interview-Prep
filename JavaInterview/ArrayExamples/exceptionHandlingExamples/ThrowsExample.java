@@ -1,4 +1,4 @@
-package ExceptionHandling;
+package exceptionHandlingExamples;
 
 import java.io.FileReader;
 import java.io.IOException;
