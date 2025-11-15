@@ -20,6 +20,14 @@ public class Employee implements Comparable<Employee>{
 		return this.id + "-" + this.name + "-" + this.salary;
 	}
 
+	public Double getSalary() {
+		return salary;
+	}
+
+	public void setSalary(Double salary) {
+		this.salary = salary;
+	}
+
 	@Override
 	public int hashCode() {
 		return Objects.hash(id, name, salary);
