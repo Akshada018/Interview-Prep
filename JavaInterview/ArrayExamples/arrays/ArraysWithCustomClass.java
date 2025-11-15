@@ -15,7 +15,8 @@ public class ArraysWithCustomClass {
 		
 		emp[0] = new Employee(1, "Akshada", 50000d);
 		emp[1] = new Employee(2, "Riya", 40000d);
-		emp[2] = new Employee(3, "Akshay", 35000d);
+		emp[1] = new Employee(6, "Ravi", 40000d);
+		emp[2] = new Employee(3, "Akshay", 40000d);
 		emp[3] = new Employee(4, "Roshan", 37000d);
 		emp[4] = new Employee(5, "Sonali", 29000d);
 		
@@ -34,11 +35,11 @@ public class ArraysWithCustomClass {
 		
 		System.out.println("Employee with highest salary: "+highestSalaryEmp);
 
-//		for(Employee e: emp) {
-//		System.out.println(e.id + "-"+ e.name + "-" + e.salary);
-//		
-//		
-//		}
+		for(Employee e: emp) {
+		System.out.println(e.id + "-"+ e.name + "-" + e.salary);
+		
+		
+		}
 		
 		Employee secondHighest = list.stream().sorted(Comparator.comparing(e -> e.salary, Comparator.reverseOrder()))
 				.skip(1).findFirst().orElse(null);

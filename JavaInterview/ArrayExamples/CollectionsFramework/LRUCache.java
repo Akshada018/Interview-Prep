@@ -9,6 +9,7 @@ public class LRUCache<K, V> extends LinkedHashMap<K, V>{
 	/**
 	 * 
 	 */
+	// LRU --> Least Recently Used --> It is a cache eviction algorithm that removes the item that was least recently accessed when the cache is full.
 	private static final long serialVersionUID = 5040639960026637991L;
 
 	private int capacity;
