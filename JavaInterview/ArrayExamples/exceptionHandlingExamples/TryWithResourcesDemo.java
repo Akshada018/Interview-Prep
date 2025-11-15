@@ -33,17 +33,17 @@ public class TryWithResourcesDemo {
 //			e.printStackTrace();
 //		}
 		
-//		try (BufferedReader reader = new BufferedReader(
-//                new FileReader("E:\\Resume\\Akshada_Shinde_Java_Developer.pdf"))) {
-//
-//            String line;
-//            while ((line = reader.readLine()) != null) {
-//                System.out.println(line); // prints each line
-//            }
-//
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
+		try (BufferedReader reader = new BufferedReader(
+                new FileReader("E:\\Resume\\Akshada_Shinde_Java_Developer.pdf"))) {
+
+            String line;
+            while ((line = reader.readLine()) != null) {
+                System.out.println(line); // prints each line
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
 		try(Snippet sn = new Snippet()){
 			System.out.println("Connecting...");
