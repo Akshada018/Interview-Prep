@@ -14,10 +14,17 @@ public class CalculatorImpl {
 		Predicate<Integer> predicate = x -> x % 2 == 0;
 		System.out.println(predicate.test(11));
 		System.out.println(predicate.test(10));
+		
+		int addition = add((a, b) ->  a+b);
+		System.out.println("Addition: "+addition);
 	}
 
 	static void doWork(Runnable r) {
 		r.run();
+	}
+	
+	static int add(Calculator c) {
+		return c.add(20, 29);
 	}
 
 }
