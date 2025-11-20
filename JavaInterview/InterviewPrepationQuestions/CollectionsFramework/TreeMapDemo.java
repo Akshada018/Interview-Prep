@@ -21,7 +21,7 @@ public class TreeMapDemo {
 		map.put("Chair", 93);
 		
 		SortedMap<String, Integer> sortedMap = new TreeMap<>(map);
-		System.out.println(sortedMap.reversed()); 
+		System.out.println(sortedMap); 
 		
 		List<Map.Entry<String, Integer>> number = new ArrayList<>(map.entrySet());
 		number.sort((e1, e2 ) -> e1.getValue().compareTo(e2.getValue()));

@@ -27,7 +27,7 @@ public class FetchLettersWithAscendingOrder {
 				.map(name -> name.charAt(0))	// first character of each string
 				.distinct() // return distinct characters
 				.sorted() // will return in ascending order
-				.toList();
+				.collect(Collectors.toList());
 //		 for above stram operation will require O(n log n) time complexity and O(n) as space complexity.
 		
 		System.out.println(chars);
