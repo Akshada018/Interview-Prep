@@ -13,6 +13,9 @@ public class SecondLongestWordInString {
 
 		System.out.println(Arrays.stream(str.split(" ")).sorted((a,b) -> Integer.compare(b.length(), a.length())).skip(1).findFirst().get());
 		
+		System.out.println(Arrays.stream(str.split(" ")).sorted(Comparator.comparing(String :: length).reversed())
+				.skip(1).findFirst().get());
+		
 	}
 
 
