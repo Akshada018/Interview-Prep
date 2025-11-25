@@ -27,5 +27,8 @@ public class DeletionInArray {
 			System.out.print(arr[i] + " ");
 		}
 		
+		
+		
+		
 	}
 }
