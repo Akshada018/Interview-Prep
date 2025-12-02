@@ -1,20 +1,28 @@
-import java.util.Scanner;
-
 public class PalindromeStringEx{
-    public static void main(String [] args){
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter a string : ");
-        String value = sc.next();
+	  public static void main(String[] args) {
+	        String str = "Abac";
+	        if(isPalindrome(str)){
+	            System.out.print(str+" is a palindrome!");
+	        }else{
+	            System.out.print(str+" is not palindrome!");
 
-        StringBuilder sb = new StringBuilder(value);
-        String newValue = sb.reverse().toString();
-
-        if(value.equalsIgnoreCase(newValue)){
-            System.out.print(value +" - string is a palindrome!!");
-        }else{
-            System.out.print(value +" - string is not a palindrome!!");
-        }
-        sc.close();
-
-    }
+	        }
+	    }
+	    
+	    public static boolean isPalindrome(String s){
+	        String reversed = reverseString(s);
+	        
+	        if(s.equalsIgnoreCase(reversed)){
+	            return true;
+	        }
+	        else return false;
+	    }
+	    
+	    public static String reverseString(String str){
+	        if(str.isEmpty()){
+	            return str;
+	        }
+	        
+	        return reverseString(str.substring(1)) + str.charAt(0);
+	    }
 }
