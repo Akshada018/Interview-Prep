@@ -70,11 +70,15 @@ public class ReverseWordsInString {
 		
 		String[] parts = s.split("\\.");
 		
-		List<String> words = Arrays.stream(parts).filter(p -> p.length() > 0).collect(Collectors.toList());
+		String words = Arrays.stream(parts).filter(p -> p.length() > 0)
+				.collect(Collectors.collectingAndThen(Collectors.toList(), list -> {
+					Collections.reverse(list);
+					return String.join(".", list);
+				}
+			));
 		
-		Collections.reverse(words);
 		
-		System.out.println(String.join(".", words));
+		System.out.println(words);
 		
 	}
 
