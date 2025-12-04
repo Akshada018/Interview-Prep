@@ -9,9 +9,12 @@ public class NumberStartsWith {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		List<Integer> numbers = Arrays.asList(1,28,11,129,150,39,90,1257,190);
+		List<Integer> numbers = Arrays.asList(1,28,11,129,150,39,90,1257,190,190);
 
 		System.out.println(numbers.stream().filter(x -> String.valueOf(x).startsWith("1")).collect(Collectors.toList()));
+		
+		System.out.println(numbers.stream().sorted((x,y) -> y-x).skip(1).findFirst().get());
+		
 	}
 
 }
