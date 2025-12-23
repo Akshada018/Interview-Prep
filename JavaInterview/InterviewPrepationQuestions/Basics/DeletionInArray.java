@@ -13,7 +13,7 @@ public class DeletionInArray {
 		arr[4] = 50;
 		
 		int n = 5; // elements present in array
-		int pos = 3; // elements to be delete at index(40)
+		int pos = 2; // elements to be delete at index(40)
 		
 		for(int i = pos; i < n-1; i++) {
 			arr[i] = arr[i+1];
