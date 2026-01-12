@@ -77,7 +77,8 @@ public class EmployeeCountByCity {
 		list.add(new Employee(6, "Sanika", "Kolhapur"));
 		list.add(new Employee(5, "Jayesh", "Pune"));
 		
-		Map<String, Long> map = new TreeMap<>(list.stream().collect(Collectors.groupingBy(Employee :: getCity, Collectors.counting())));
+		Map<String, Long> map = new TreeMap<>(
+				list.stream().collect(Collectors.groupingBy(Employee::getCity, Collectors.counting())));
 		
 		System.out.println(map);
 
